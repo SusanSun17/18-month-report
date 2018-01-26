@@ -1,0 +1,65 @@
+\documentclass[report_18month.tex]{subfiles}
+\begin{document}
+
+
+
+\section{Revenue Streams open to Renewable Energy Co-located Battery Systems}
+Until recently, the business model of most renewable energy installations was to sell electricity wholesale on the spot market or in a bilateral agreement with an energy supplier. With negligible marginal costs, it was possible for renewable plants to offer lower electricity prices than fossil-fuelled generators at times – the initial costs were recouped by claiming FiT and/or trading ROCs. Since the ending of the RO scheme and the reduction of FiT, renewable plants have had to explore different business models. The ones incorporating energy storage are discussed here.
+
+\subsection{Microgrid Operation}
+When a community or base station (for weather monitoring or communications) is very remote, the cost of diesel deliveries for generators or maintaining a long connection to the main electrical grid is high, and the option of renewable energy with storage becomes comparatively favourable. [44], [45], [46]
+
+A single home with rooftop PV and home battery [47] can be considered a subset of microgrid, in ownership structure if not in detail. The difference is that a microgrid in the strictest sense has no connection to the main grid, while a home system does. Thus if a microgrid runs low on energy supply (stored or otherwise), it cannot meet demand, and if the storage is full and generation exceeds demand, there is nowhere for the excess to go.
+
+However, a home PV-and-battery system can export any excess to the grid and import any shortfall. This means that the home system cannot save any carbon emissions, unless the boundary is drawn artificially around the home rather than the country (and it should not because the grid connection links the home to the country), or the PV capacity far exceeds the home’s grid connection capacity (causing curtailment in the absence of storage). Hill View Farm fits this category, having 27 kW PV generation capacity but only 19.5 kW connection to the grid. However, curtailment is so rare that some 8 ton less of CO2 is saved with batteries compared to without, due to the embodied carbon of battery manufacture and operational efficiency losses (Section 3.1).
+
+As Nerini et al. note, the more energy that a community demands, the more worthwhile it becomes to establish a connection to the main grid. [46] While microgrids are a good short-term solution to electrify remote communities, they cannot be relied upon as a long-term value proposition, especially given the global trend towards centralised urbanised populations.
+ 
+\subsection{PPA with load centre via private wire}
+A Power Purchase Agreement (PPA) with a load centre is superficially similar to microgrid operation; the main difference is that the load centre has a different owner to the renewable energy and storage installation. A microgrid owner (which may be a whole community) must pay for all energy usage, deriving value from the difference between a renewables-and-storage system compared to the alternative, be it diesel deliveries or a connection to the main grid.
+
+With a private wire PPA, the value is derived from the willingness of the load centre to buy electricity above the market rate, and the renewable installation’s ability to supply electricity below the market rate. For example, if the wholesale selling price of electricity is £50/MWh and the retail buy price is £100/MWh, both buyer and seller benefit if they negotiate a price in between, say at £70/MWh.
+
+The largest example of a private wire arrangement in Europe is the 72 MW Shotwick Solar Park, UK, which supplies the UPM paper mill in Shotton. [48] Private wire PPAs are common for other forms of renewable energy too, for example, the geothermal energy centre in Southampton supplies the Associated British Ports via private wire, in addition to a number of hotels, offices, housing schemes and a shopping centre. [49]
+
+The question then is whether energy storage would add any value to existing private wire PPAs. Some load centres may be willing to cover the costs of battery installation if they value the right to claim that even more of their electricity is supplied by a low-carbon source. Indeed, it may even be more worthwhile financially for them to pay a renewable-and-battery installation slightly more per MWh (compared to an installation without batteries) if it still offsets the avoided costs of buying mains electricity.
+
+\subsection{Ancillary Services}
+These are services rendered to the Transmission Network Operator (TNO – National Grid in the UK), in exchange for payment by the TNO depending on the type of service. The services are needed to balance the network – a mismatch between supply and demand at any instant, whether from mis-forecast demand or renewable generation, or unexpected failure of generation plant, causes the system frequency to deviate from nominal. The TNO is required by law to keep the frequency within given limits (50.0 ± 0.5 Hz in the UK). [16]
+
+\subsubsection{Reserve}
+An availability payment is made to a generator per hour for each MW they hold in reserve, and a utilisation payment for each MWh delivered when called upon by the TNO (for example via a radio signal). UK examples include Short-Term Operating Reserve [50] (minimum 3 MW participation, ramp to full power within 240 minutes, must be sustained up to 120 minutes) and Fast Reserve [51] (minimum 50 MW participation, ramping at least 25 MW/min, to full power within 2 minutes, must be sustained up to 15 minutes). Large generators are additionally obliged to hold a certain amount of capacity in reserve.
+
+Typically projects will tender a certain MW capacity for a certain availability payment and utilisation payment, and the system operator will accept or reject the tender depending on technical criteria (can the reserve capacity offered be available at the hours needed by the system operator, can they meet the requirements for response time and duration of service provision) and economic criteria (is this offer cheaper than the alternative). As the tender process operates as a sealed-bid auction, projects are incentivised to make offers as low as possible while covering their costs.
+
+\subsubsection{Frequency Response}
+This category includes Firm Frequency Response (FFR) [52] and Enhanced Frequency Response (EFR) [53] in the UK, the first tender round for EFR having been held in 2016. EFR was introduced to tackle the problem of reduced total system inertia caused by increasing installation of renewable energy sources (see Section 2.1.1). Its requirements closely resemble Primary Control Reserve (PCR) which has existed for some time on the European continent. [54]
+
+The main difference between reserve and frequency response services is how they are triggered: reserve is triggered by a control signal from the system operator, whereas frequency response requires constant monitoring of the system frequency and actuating a pre-defined power response to a frequency deviation. For FFR, the response is defined in the tender offered; for EFR, the response must lie within the envelope defined by National Grid, otherwise the contracted party is liable for penalties. No utilisation payments are given for EFR, only availability payments. [53]
+
+Moreno et al. have simulated a 6 MW / 10 MWh battery offering both reserve and FFR in the UK. Using Mixed Integer Linear Programming (MILP), they constructed an operating strategy that ensures the battery is charged enough to provide the services it is contracted for, while minimising costs of buying electricity on the wholesale market. They show that stacking services is more lucrative than offering a single service. [55]
+
+Bakke et al. have modelled a similar situation, additionally simulating a stochastically falling battery price and its influence on the decision of when to begin investing. They conclude from their real options analysis that even though the NPV is already positive for a grid-connected battery offering stacked services, the less-than-expected investment activity in Germany and the UK can be explained by investors waiting for battery prices to fall further and result in an even higher NPV. [56]
+
+No work has yet been published on the provision of EFR in the UK by a renewable installation with co-located batteries, although the successful tenders in the first round include some such installations, as well as grid-connected batteries without accompanying renewable power. [57], [58] However, some work has been done by Stroe et al. on a similar service on the Danish grid provided by a 0.4 MW / 0.1 MWh battery sited at a 12 MW wind farm. The battery does not appear to have been designed for simultaneous curtailment avoidance, but only for Primary Frequency Response service (PFR, similar to PCR). [59]
+
+\subsubsection{Reactive Power Response}
+The voltage profile along a distribution feeder is shaped by the flows of real and reactive power. Inductive loads absorb reactive power while capacitive loads generate it. To keep mains voltage within legal limits (230 V + 10 \%/ -6 \% in the UK), large generators are required to have some reactive power generation capability which can be called upon similarly to reserve services. Generators and energy storage systems may also tender for contracts to provide reserves of reactive power, similarly to real power reserves, but assessed additionally on locational criteria. The delivery of reactive power is achieved through control of the power electronic converter connecting the energy storage system to the grid.
+
+Reactive power response is one of many Vehicle-to-Grid (V2G) services being researched: for example, Kiaee et al. investigated the dispatching of the batteries of EVs charging in a car park to relieve the voltage rise that occurs on the distribution network as a result of power injection from solar PV farms. [60]
+
+\subsubsection{Demand-Side Services}
+It is possible for large industrial or commercial load centres to contract to reduce or increase their demand in response to a control signal (Demand Turn Up), or the measured frequency (Frequency Control by Demand Management). There is also the triad mechanism in the UK, but since payment is being phased out for generators below 100 MW, [37] the benefit can only be realised in conjunction with a load centre. Pimm et al. studied the use of battery storage to reduce Lancaster University’s exposure to triad payments. [61]
+
+For most services that National Grid tenders for, there is a move towards accommodating service provision from aggregated units. An aggregator company signs up a large number of smaller units, coordinates the assets to provide services to the grid, and pays a fee or dividend to the asset owners. This is what Moixa offers to home battery owners in its GridShare scheme [62] and Open Energi via its demand-side management platform Dynamic Demand [63].
+
+\subsubsection{DNO Services}
+It is rare for DNOs in the UK to invite tenders for services which they benefit from by avoiding breaching thermal or voltage limits, or postponing investment in the infrastructure needed to avoid those limits. For reasons of fair competition, DNOs are not allowed to own generation plant, of which energy storage is a subset [14] – unlike in North America, where transmission and distribution networks tend to be owned and operated by Independent System Operators who plan, invest in, and operate all their assets for balancing the system.
+
+Despite this, DNOs have conducted trials into using energy storage to postpone infrastructure reinforcement. For example, Southern Electric’s Thames Valley Vision project trialled lithium-ion batteries housed in roadside cabinets for peak shaving, and a demand response online platform that incentivises customers to reduce their usage at times of high demand, amongst others. [64]
+
+The main mechanism used by DNOs to incentivise usage patterns more favourable to them are the Distribution Use of System charges (DUoS). These are levied from consumers and generators connected at distribution level. They vary by region and throughout the day, to incentivise usage outside of peak times and placement of loads and generators in locations that relieve congestion rather than exacerbating it. The amounts charged are calculated by the Common Distribution Charging Mechanism (CDCM) which ensures the DNO covers costs of planning, maintaining and constructing network infrastructure, and that the costs are borne fairly by customers, without the DNO making undue profit. [65]
+
+
+
+\end{document}

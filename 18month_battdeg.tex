@@ -1,0 +1,39 @@
+\documentclass[report_18month.tex]{subfiles}
+\begin{document}
+
+
+
+\section{}
+Battery degradation is expected to be a significant driving factor in the techno-economic analysis for two reasons:
+\begin{enumerate}
+\item Operational efficiency is affected by instantaneous and accumulated conditions (i.e. degradation – which is itself affected by system operation)
+\item Degradation affects battery lifetime, an estimate of which is needed to calculate the replacement costs (financial and embodied emissions).
+\end{enumerate}
+
+Stroe et al. [67] classify battery degradation models thus:
+\begin{itemize}
+\item Cycle counting
+\item Ah/Wh throughput
+\item Equivalent Electric Circuit (EEC)
+\item Electrochemical
+\end{itemize}
+
+Electrochemical models aim to capture the detailed dynamics of the physical and chemical processes that cause battery degradation. In theory, not many experimental measurements are required to fix the parameters - however, small differences in battery chemistry or manufacturing conditions often render this promise unfulfilled. Because of this, and the level of detail unnecessary to estimating lifetime and efficiency, electrochemical models will not be considered unless the other options are found inadequate.
+
+Stroe et al. used an EEC with rainflow counting for system lifetime estimation of a battery co-located at a wind farm offering primary frequency response. [59] The circuit model used is found empirically, using electro-impedance spectroscopy (EIS) to fit parameters, and pulse charging to find internal resistance. Many measurements must be taken over a long time period (with accelerated aging, it can be difficult to separate the effects of time, temperature and charge rate), and there is no guarantee that measurements of one battery product apply to another.
+
+NREL’s System Advisor Model (SAM) [68] which simulates and calculates costs and revenues from solar-and-battery systems, uses cycle counting, bordering on EEC: the Shepherd equation gives the terminal voltage at each timestep as a function of charge state and charge/discharge current. The parameters are obtained from a discharge curve of the battery. Thus the battery efficiency varies with current (see Figure 2 4), unlike the simple models presented in Sections 3.1-3.2.
+
+A rainflow counting algorithm counts battery cycles at different depths of discharge, and a lookup table (populated by manufacturer’s data) gives the capacity fade as a function of cycles and average depth of discharge. Updating the maximum capacity each cycle affects the voltage curve. While the charge state is updated according to the battery temperature (ohmic heating dissipating to the ambient), temperature has no effect on lifetime degradation in SAM (which it is known to do [69]), nor does time spent at low or high SoC [70], nor does the internal resistance change [69]. The lifetime model has not been experimentally validated.
+
+Cycle counting is also used by Perez et al. [71] in an extension to Moreno et al.’s work. [55] By counting the battery cycles and reducing the battery’s maximum capacity according to manufacturer’s data, it was found that restricting the cycle depth to 25 \% would preserve the battery capacity enough to recoup and exceed the reduction in short-term revenue caused by this restriction.
+
+Bordin et al. [72] use the Ah/Wh throughput method to assign a cost per kWh through a grid storage battery. Including this in the objective function, they find how the initial sizing of the system depends on how the degradation is costed. Though very simple, this method is supported by evidence showing that cycle life varies inversely to allowed cycle depth. [73], [70] But obviously it does not take into account temperature, average SoC, charge/discharge rate, or the numerous other driving factors of degradation.
+
+The models mentioned here all apply at the cell level; however, intra-cell variation is known to affect system parameters. [74] The variation in cell capacity and internal resistance arising from imperfect manufacturing processes (active material deposition, calendaring, etc.) leads to uneven loading of cells within the pack, and hence a further spreading of the parameter distributions. This is exacerbated by spatial variation in current density and heat generation. Even with active or passive management systems to continuously balance cell voltages, [75] it is unlikely that the entire battery pack will fail at once, as modelled in Sections 3.1-3.2. Consideration must be made for gradual replacement of the battery system, module by module, and for the risk of sudden failure [70] as opposed to end of life defined as the capacity degrading to a pre-defined level relative to the initial capacity.
+
+\subsection{}
+
+
+
+\end{document}
